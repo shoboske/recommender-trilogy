@@ -1,5 +1,6 @@
 import pandas as pd
 from surprise import Dataset, Reader
+import pickle
 
 # Load the data
 data = pd.read_csv('./data/e_commerce.csv')
@@ -15,3 +16,6 @@ reader = Reader(rating_scale=(1, 5))
 
 # Load the data into Surprise dataset
 data = Dataset.load_from_df(data[['Order ID', 'Product', 'Sales']], reader)
+
+with open('data.pkl', 'wb') as f:
+    pickle.dump(data, f)

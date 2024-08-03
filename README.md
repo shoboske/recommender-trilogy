@@ -29,7 +29,7 @@ This repository contains the code for an AI-powered recommendation engine for an
 
 3. Generate recommendations:
    ```bash
-   python generate_recommendations.py --user_id <USER_ID>
+   python make_predictions.py
    ```
 
 ## Evaluation
